@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
 
   <title>테스트 알림</title>
 </head>
@@ -13,7 +13,7 @@
   <script>
     // 서비스워커 등록
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js");
+      navigator.serviceWorker.register("sw.js");
     }
 
     document.getElementById("notify").addEventListener("click", async () => {
@@ -29,8 +29,8 @@
       if (reg) {
         reg.showNotification("추천인 가입", {
           body: "밍밍님이 가입하셨습니다.",
-          icon: "/icon.png",  // 아무 이미지나 넣어도 됨
-          badge: "/icon.png"
+          icon: "icon.png",  // 아무 이미지나 넣어도 됨
+          badge: "icon.png"
         });
       }
     });
